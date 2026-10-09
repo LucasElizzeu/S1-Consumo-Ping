@@ -1,5 +1,5 @@
-+++    AM_TFE_05        2026-09-30 16:20:07
-O&M    #806354944
++++    AM_TFE_05        2026-10-08 23:11:48
+O&M    #806354949
 %%DSP S1INTERFACE:;%%
 RETCODE = 0  Operation succeeded.
 
@@ -7,7 +7,7 @@ Display S1 Interface Information
 --------------------------------
 S1 Interface ID  S1 Interface CP Bearer ID  CN Operator ID  MME Release  S1 Interface Is Blocked  Dedicated Network Indicator                                                 Control Mode  Auto Config Flag  MME Selection Priority  CN Operator Sharing Group ID  S1 Interface State  S1 CP Bearer State  MME Is Overloaded  S1 Interface User Number  MME Name                                    Served PLMNs   Served GUMMEIs                                                                                                                                                                                                                                   MME Relative Capacity  S1 Interface Fault Reason  Peer IPv4 Address  Peer IPv6 Address  S1 ID
 
-40000            70000                      0               Release 8    FALSE                    CN_REDUNDANCY_IND:Off&ISOLATED_OPERATION_IND:Off&CN_REDUNDANCY_OPT_IND:Off  AUTO_MODE     Auto Created      100                     255                           Normal              Normal              FALSE              87                        mme-tefe.epc.mnc099.mcc724.3gppnetwork.org  724-99         724-99-2-8                                                                                                                                                                                                                                       255                    NULL                       10.0.28.1          ::                 1    
+40000            70000                      0               Release 8    FALSE                    CN_REDUNDANCY_IND:Off&ISOLATED_OPERATION_IND:Off&CN_REDUNDANCY_OPT_IND:Off  AUTO_MODE     Auto Created      100                     255                           Normal              Normal              FALSE              47                        mme-tefe.epc.mnc099.mcc724.3gppnetwork.org  724-99,724-02  724-99-2-8,724-02-2-8                                                                                                                                                                                                                            255                    NULL                       10.0.28.1          ::                 1    
 40001            70001                      0               Release 8    TRUE                     CN_REDUNDANCY_IND:Off&ISOLATED_OPERATION_IND:Off&CN_REDUNDANCY_OPT_IND:Off  AUTO_MODE     Auto Created      255                     255                           Normal              Normal              FALSE              0                         NULL                                        724-99,724-02  724-99-35050-0,724-99-35050-1,724-99-35050-2,724-99-35050-3,724-99-35050-4,724-99-35050-5,724-99-35050-6,724-99-35050-7,724-02-35050-0,724-02-35050-1,724-02-35050-2,724-02-35050-3,724-02-35050-4,724-02-35050-5,724-02-35050-6,724-02-35050-7  0                      NULL                       10.8.171.69        ::                 0    
 (Number of results = 2)
 

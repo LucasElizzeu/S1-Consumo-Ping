@@ -1,1 +1,20 @@
-ERRO_AUTOMACAO: Assist nao gerou a interface de parametros do comando.
++++    AM_TFE_03        2026-10-08 22:07:18
+O&M    #2686451830
+%%DSP NRCELLUENUMBER:;%%
+RETCODE = 0  Operation succeeded.
+
+Display NR Cell UE Access Statistics
+------------------------------------
+NR Cell ID  Cell Name         Cell MO-Signal RRC Number  Cell MO-Data RRC Number  Cell MT-Access RRC Number  Cell Other RRC Number  Cell Total RRC Number  Cell VoNR UE Number  Cell CA UE Number  Cell EN-DC UE Number  Cell UL and DL Decoupling UE Number  Cell Super Uplink UE Number  Cell DRB Number  Cell Cloud VR UE Number  Cell UL Live Video Number  Cell FWA Private Line UE Number  Cell FWA B2H UE Number
+
+591         AM_TFE_NR_N78_S1  0                          0                        0                          14                     14                     0                    0                  14                    0                                    0                            14               0                        0                          0                                0                     
+592         AM_TFE_NR_N78_S2  0                          0                        0                          29                     29                     0                    0                  29                    0                                    0                            29               0                        0                          0                                0                     
+593         AM_TFE_NR_N78_S3  0                          0                        0                          22                     22                     0                    0                  22                    0                                    0                            22               0                        0                          0                                0                     
+(Number of results = 3)
+
+
+---    END
+
+
+
+ Save Result  	 Auto Scroll
