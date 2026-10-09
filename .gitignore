@@ -1,0 +1,95 @@
+# ===== Segredos / credenciais =====
+.env
+.env.*
+!.env.example
+*.env
+.env.local
+.env.*.local
+
+# Chaves e certificados
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account.json
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testes / cobertura
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Ferramentas
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ===== Dados e logs locais =====
+*.log
+logs/
+*.sqlite
+*.sqlite3
+*.db
+*.csv
+*.xlsx
+*.json
+!package.json
+dump/
+backup/
+backups/
+
+# Sessões de navegador (Chromium/LevelDB)
+sessoes_bbu/
+sessoes_*/
+*_sessions/
+chrome-profile/
+user-data/
+
+# ===== Sistema operacional =====
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# ===== Editores / IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.code-workspace
+
+# ===== Outros =====
+*.bak
+*.tmp
+*.temp
+.cache/

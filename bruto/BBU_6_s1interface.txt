@@ -1,0 +1,19 @@
++++    AM_TFE_06        2026-10-06 23:13:29
+O&M    #806354974
+%%DSP S1INTERFACE:;%%
+RETCODE = 0  Operation succeeded.
+
+Display S1 Interface Information
+--------------------------------
+S1 Interface ID  S1 Interface CP Bearer ID  CN Operator ID  MME Release  S1 Interface Is Blocked  Dedicated Network Indicator                                                 Control Mode  Auto Config Flag  MME Selection Priority  CN Operator Sharing Group ID  S1 Interface State  S1 CP Bearer State  MME Is Overloaded  S1 Interface User Number  MME Name                                    Served PLMNs  Served GUMMEIs  MME Relative Capacity  S1 Interface Fault Reason  Peer IPv4 Address  Peer IPv6 Address  S1 ID
+
+40001            70001                      0               Release 8    FALSE                    CN_REDUNDANCY_IND:Off&ISOLATED_OPERATION_IND:Off&CN_REDUNDANCY_OPT_IND:Off  AUTO_MODE     Auto Created      100                     255                           Normal              Normal              FALSE              97                        mme-tefe.epc.mnc099.mcc724.3gppnetwork.org  724-99        724-99-2-8      255                    NULL                       10.0.28.1          ::                 1    
+40002            70002                      0               Release 8    TRUE                     CN_REDUNDANCY_IND:Off&ISOLATED_OPERATION_IND:Off&CN_REDUNDANCY_OPT_IND:Off  AUTO_MODE     Auto Created      255                     255                           Abnormal            Abnormal            NULL               0                         NULL                                        NULL          NULL            0                      SCTP Link Failure          10.8.171.69        ::                 0    
+(Number of results = 2)
+
+
+---    END
+
+
+
+ Save Result  	 Auto Scroll

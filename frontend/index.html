@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOC TEFE</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">NT</div>
+          <div>
+            <strong>NOC TEFE</strong>
+            <span>Operacao local</span>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Navegacao principal">
+          <button class="nav-item active" type="button" data-view="dashboard">Painel</button>
+          <div class="nav-group" id="equipGroup">
+            <button class="nav-item nav-parent" type="button" id="equipToggle" aria-expanded="false">
+              Equipamentos
+              <span class="chevron">v</span>
+            </button>
+            <div class="nav-submenu" aria-label="Tipos de equipamentos">
+              <button class="nav-subitem" type="button" data-equipment="datacom">Datacom</button>
+              <button class="nav-subitem" type="button" data-equipment="bbu">BBU</button>
+              <button class="nav-subitem" type="button" data-equipment="radio">Radio</button>
+            </div>
+          </div>
+          <button class="nav-item" type="button" data-view="sites">Sites</button>
+          <button class="nav-item" type="button" data-view="alertas">Alertas</button>
+          <button class="nav-item" type="button" data-view="config">Config</button>
+        </nav>
+
+        <div class="service-card">
+          <span class="service-dot"></span>
+          <div>
+            <strong id="serviceState">Servico ativo</strong>
+            <span id="nextRun">Proxima coleta 14:55</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Monitoramento</p>
+            <h1>Rede TEFE</h1>
+          </div>
+          <div class="top-actions">
+            <span id="clock" class="clock">--:--:--</span>
+            <button class="icon-button" type="button" id="refreshBtn" title="Atualizar painel">R</button>
+            <button class="primary-button" type="button" id="runBtn">Coletar agora</button>
+          </div>
+        </header>
+
+        <section class="metrics-grid" aria-label="Resumo">
+          <article class="metric">
+            <span>Sites online</span>
+            <strong id="metricOnline">0/0</strong>
+          </article>
+          <article class="metric">
+            <span>Usuarios</span>
+            <strong id="metricUsers">0</strong>
+          </article>
+          <article class="metric">
+            <span>Consumo</span>
+            <strong id="metricTraffic">0 Mb/s</strong>
+          </article>
+          <article class="metric">
+            <span>Alertas</span>
+            <strong id="metricAlerts">0</strong>
+          </article>
+        </section>
+
+        <section class="workspace">
+          <div class="content">
+            <div class="toolbar">
+              <div class="search-wrap">
+                <span>Buscar</span>
+                <input id="searchInput" type="search" placeholder="Site, IP ou status" />
+              </div>
+              <div class="segmented" role="tablist" aria-label="Filtro de status">
+                <button class="segment active" type="button" data-filter="todos">Todos</button>
+                <button class="segment" type="button" data-filter="normal">Normal</button>
+                <button class="segment" type="button" data-filter="falha">Falha</button>
+              </div>
+              <button class="secondary-button" type="button" id="addSiteBtn">Adicionar site</button>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Site</th>
+                    <th>IP</th>
+                    <th>Usuarios</th>
+                    <th>Consumo</th>
+                    <th>Ping</th>
+                    <th>Status</th>
+                    <th>Alerta</th>
+                  </tr>
+                </thead>
+                <tbody id="sitesTable"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="details">
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Detalhe</h2>
+                <span id="detailStatus" class="pill">Normal</span>
+              </div>
+              <div id="detailBody" class="detail-body"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>AAU</h2>
+                <span id="aauTotal" class="muted">0 UE/RRC</span>
+              </div>
+              <div id="aauList" class="aau-list"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Eventos</h2>
+                <span class="muted">tempo real</span>
+              </div>
+              <div id="eventsList" class="events-list"></div>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="siteDialog">
+      <form method="dialog" id="siteForm">
+        <div class="dialog-header">
+          <h2 id="dialogTitle">Site</h2>
+          <button class="icon-button" type="button" id="closeDialogBtn" title="Fechar">X</button>
+        </div>
+        <label>
+          Nome
+          <input id="siteName" required />
+        </label>
+        <label>
+          IP
+          <input id="siteIp" required />
+        </label>
+        <label>
+          Consumo
+          <input id="siteTraffic" required />
+        </label>
+        <label>
+          Usuarios
+          <input id="siteUsers" type="number" min="0" required />
+        </label>
+        <label>
+          Ping ms
+          <input id="sitePing" type="number" min="0" required />
+        </label>
+        <label>
+          Status
+          <select id="siteStatus">
+            <option value="normal">Normal</option>
+            <option value="falha">Falha</option>
+            <option value="manutencao">Manutencao</option>
+          </select>
+        </label>
+        <div class="dialog-actions">
+          <button class="secondary-button" type="button" id="deleteSiteBtn">Remover</button>
+          <button class="primary-button" type="submit">Salvar</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

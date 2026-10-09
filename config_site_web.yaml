@@ -1,0 +1,38 @@
+﻿cidade: TEFE
+
+sites:
+  - nome: "BBU 1"
+    url: "http://10.50.0.21" #10.50.0.21
+    credential_group: "padrao"
+    s1interface: true
+    nrcell: true
+
+  - nome: "BBU 2"
+    url: "http://10.50.0.22"
+    credential_group: "bbu2"
+    s1interface: true
+    nrcell: false
+
+  - nome: "BBU 3"
+    url: "http://10.50.0.23"
+    credential_group: "bbu3"
+    s1interface: true
+    nrcell: true
+
+  - nome: "BBU 4"
+    url: "http://10.50.0.24"
+    credential_group: "padrao"
+    s1interface: true
+    nrcell: true
+
+  - nome: "BBU 5"
+    url: "http://10.31.0.35"
+    credential_group: "padrao"
+    s1interface: true
+    nrcell: false
+
+  - nome: "BBU 6"
+    url: "http://10.50.0.26"
+    credential_group: "padrao"
+    s1interface: true
+    nrcell: false
