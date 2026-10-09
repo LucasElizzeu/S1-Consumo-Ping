@@ -6,8 +6,6 @@ from dotenv import dotenv_values
 
 ENV = Path(r"C:\noc_tefe\.env")
 CHAVES = [
-    "TELEGRAM_BOT_TOKEN",
-    "TELEGRAM_CHAT_ID",
     "BBU_USER",
     "BBU_PASSWORD_DEFAULT",
     "BBU_PASSWORD_3",

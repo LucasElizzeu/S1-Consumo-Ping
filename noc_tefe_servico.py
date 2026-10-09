@@ -35,8 +35,6 @@ CONFIG = os.path.join(BASE_DIR, "config_site_web.yaml")
 SESSOES_DIR = Path(BASE_DIR) / "sessoes_bbu"
 KEEPALIVE_SEGUNDOS = 8 * 60
 COLETA_SEGUNDOS = 60 * 60
-ENVIAR_TESTE_KEEPALIVE_TELEGRAM = True
-
 
 def carregar_config():
     with open(CONFIG, "r", encoding="utf-8") as arquivo:
@@ -300,7 +298,7 @@ def main():
                     proxima = proxima + timedelta(seconds=COLETA_SEGUNDOS)
                     print(f"Proxima coleta: {proxima:%d/%m/%Y %H:%M}")
 
-                if ENVIAR_TESTE_KEEPALIVE_TELEGRAM and agora >= proximo_teste_keepalive:
+                if agora >= proximo_teste_keepalive:
                     enviar_teste_keepalive(sessoes)
                     proximo_teste_keepalive = datetime.now() + timedelta(seconds=KEEPALIVE_SEGUNDOS)
 
