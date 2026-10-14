@@ -13,7 +13,7 @@ GRAFANA_URL = os.getenv("GRAFANA_URL", "")
 GRAFANA_USER = os.getenv("GRAFANA_USER", "")
 GRAFANA_PASSWORD = os.getenv("GRAFANA_PASSWORD", "")
 
-PAINEIS_TEFE = [139, 358, 359, 377, 378, 384, 385]
+PAINEIS_TEFE = [139, 358, 359, 377, 378, 384]
 
 
 def formatar_bps(valor):

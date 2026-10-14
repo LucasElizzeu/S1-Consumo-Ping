@@ -34,5 +34,6 @@ sites:
   - nome: "BBU 6"
     url: "http://10.50.0.26"
     credential_group: "padrao"
+    access_timeout_ms: 90000
     s1interface: true
     nrcell: false

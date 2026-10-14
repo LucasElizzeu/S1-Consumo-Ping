@@ -44,7 +44,7 @@ def testar_ping(host: str, duracao_segundos: int = 15) -> dict:
     if not host:
         return {"host": host, "ok": False, "perda_pct": 100, "latencia_ms": None}
 
-    pacotes = max(1, duracao_segundos // 3)
+    pacotes = max(4, duracao_segundos // 2)
     comando = ["ping", "-n", str(pacotes), "-w", "3000", host]
 
     try:
